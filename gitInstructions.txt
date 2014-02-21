@@ -1,0 +1,26 @@
+[git works better with linux]
+
+0. at any time, to see the git settings
+	$ git config -l
+
+1. removing the old origin
+	$ git remote rm origin
+
+2. adding current working origin
+	$ git remote add origin https://github.com/TheCoApp/Talbish
+
+3. change path to the desired working path, you must not be inside an older folder of the git repository
+
+4. get the repositery
+	$ git clone https://github.com/TheCoApp/Talbish
+
+...work
+
+5. if nedded, add the new files and directories
+	$ git add
+
+6. from inside the working directory, commit your work to the git log. write exactly what have you done, so anyone can understand without calling you in 2:00 AM
+	$ git commit
+
+7. push your changes to the repository
+	$ git push
