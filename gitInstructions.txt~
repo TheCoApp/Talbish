@@ -17,7 +17,7 @@
 ...work
 
 5. if nedded, add the new files and directories
-	$ git add fileName
+	$ git add
 
 6. from inside the working directory, commit your work to the git log. write exactly what have you done, so anyone can understand without calling you in 2:00 AM
 	$ git commit
