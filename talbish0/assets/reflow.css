@@ -1,0 +1,102 @@
+/* This code is only meant for previewing your Reflow design. */
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+}
+#reflow-da7ff3b3-d827-41e7-88e2-d6a12aa63f62 {
+    float: left;
+    font-size: 1em;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin-left: 21.707343412526996%;
+    margin-top: 33px;
+    clear: none;
+    min-height: 0px;
+}
+#background {
+    float: left;
+    height: 701px;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: none;
+    width: 400px;
+    background-color: rgb(57, 14, 14);
+}
+#weather {
+    float: left;
+    height: 122px;
+    margin-left: 0.25%;
+    margin-top: -21px;
+    clear: none;
+    width: 99.75%;
+    background-color: rgb(49, 255, 0);
+}
+#head {
+    float: none;
+    height: 80px;
+    margin-left: auto;
+    margin-top: 122px;
+    clear: none;
+    width: 82.75%;
+    background-color: rgb(235, 212, 212);
+    margin-right: auto;
+}
+#legs {
+    float: none;
+    height: 150px;
+    margin-left: auto;
+    margin-top: -320px;
+    clear: none;
+    width: 82.75%;
+    background-color: rgb(247, 194, 194);
+    margin-right: auto;
+}
+#body {
+    float: none;
+    height: 170px;
+    margin-left: auto;
+    margin-top: 150px;
+    clear: none;
+    width: 82.75%;
+    background-color: rgb(242, 115, 115);
+    margin-right: auto;
+}
+#shoes {
+    float: none;
+    height: 50px;
+    margin-left: auto;
+    margin-top: 170px;
+    clear: none;
+    width: 82.75%;
+    background-color: rgb(242, 70, 70);
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    overflow: auto;
+    margin-right: auto;
+}
+#kar_li {
+    float: left;
+    height: 105px;
+    margin-left: 0%;
+    margin-top: 34px;
+    clear: both;
+    width: 99.75%;
+    background-color: rgb(118, 33, 234);
+}
+#profile {
+    float: left;
+    height: 48px;
+    margin-left: -4.534743202416918%;
+    margin-top: -11px;
+    clear: none;
+    width: 38.97583081570997%;
+    background-color: rgb(255, 255, 0);
+}

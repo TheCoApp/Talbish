@@ -1,0 +1,68 @@
+/* This code is only meant for previewing your Reflow design. */
+.primaryContainer {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    width: 100%;
+}
+#reflow-da7ff3b3-d827-41e7-88e2-d6a12aa63f62 {
+    float: left;
+    font-size: 1em;
+    width: auto;
+    height: auto;
+    text-align: left;
+    font-weight: normal;
+    line-height: 1em;
+    word-wrap: break-word;
+    margin-left: 21.707343412526996%;
+    margin-top: 33px;
+    clear: none;
+    min-height: 0px;
+}
+#box {
+    float: left;
+    height: 701px;
+    margin-left: 0%;
+    margin-top: 0px;
+    clear: none;
+    width: 400px;
+    background-color: rgb(57, 14, 14);
+}
+#box1 {
+    float: left;
+    height: 700px;
+    margin-left: 33.25%;
+    margin-top: 0px;
+    clear: none;
+    width: 33%;
+    background-color: rgb(242, 70, 70);
+    opacity: 1;
+    visibility: visible;
+    display: block;
+    overflow: auto;
+}
+#box3 {
+    float: left;
+    height: 700px;
+    margin-left: 0.5%;
+    margin-top: 0px;
+    clear: none;
+    width: 33%;
+    background-color: rgb(118, 33, 234);
+    opacity: 1;
+    display: block;
+    overflow: auto;
+}
+#box2 {
+    float: left;
+    height: 700px;
+    margin-left: -66.75%;
+    margin-top: 0px;
+    clear: none;
+    width: 33%;
+    background-color: rgb(255, 255, 0);
+    opacity: 1;
+    display: block;
+    overflow: auto;
+}

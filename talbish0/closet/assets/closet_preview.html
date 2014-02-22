@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <!-- This code is only meant for previewing your Reflow design. -->
+    <head>
+	<link rel="stylesheet" href="boilerplate.css" />
+	<link rel="stylesheet" href="reflow.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+<script LANGUAGE="JavaScript">
+function clothes_in_closet(form){
+var counter=0
+var num_of_clothes=3
+for (var i=0;i<num_of_clothes;i++){
+	if (form.closet[i].checked==false)
+		{counter++;}
+}
+if (counter==num_of_clothes) {
+alert ( "אין לך מה ללבוש בכלל!" );
+
+return false;
+}}
+
+</script>
+
+
+</head>
+    <body>
+<div id="primaryContainer" class="primaryContainer clearfix">
+               <div id='box' class='clearfix'>
+           <div id='box1' class='clearfix'>
+             <p>
+             <span style="text-align: left">
+               <label>
+		<form name="closet_update" action="C:\Users\Yaeli\Documents\talbish0\closet\assets\closet.html" method=post>
+                 <input type="checkbox" name="closet" value="coat">
+                 מעיל</label>
+               <br>
+               <label>
+                 <input type="checkbox" name="closet" value="gloves">
+                 כפפות</label>
+               <br>
+               <label>
+                 <input type="checkbox" name="closet" value="scarf">
+                 צעיף</label>
+               <br>
+             </span>
+                           <input type="submit" name="SubmitButton" value="מלא לי את הארון" onClick="clothes_in_closet(this.form)">
+
+           </div>
+           <div id='box2' class='clearfix'>
+            <input type="checkbox" name="closet" value="shoes">
+                 נעליים</label>
+               <br>
+
+    </div>
+           <div id='box3' class='clearfix'>
+           </div>
+       </div>
+
+	</div>
+    </body>
+</html>
