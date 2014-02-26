@@ -21,13 +21,16 @@
     min-height: 0px;
 }
 #background {
-    float: left;
-    height: 701px;
-    margin-left: 0%;
-    margin-top: 0px;
-    clear: none;
-    width: 400px;
-    background-color: rgb(57, 14, 14);
+	float: left;
+	height: 701px;
+	margin-left: 0%;
+	margin-top: 0px;
+	clear: none;
+	width: 400px;
+	background-color: rgb(57, 14, 14);
+	background-image: url(file:///C|/Users/Lotan/Desktop/%D7%9E%D7%A4%D7%AA%D7%97.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 #weather {
     float: left;
@@ -83,13 +86,14 @@
     margin-right: auto;
 }
 #kar_li {
-    float: left;
-    height: 105px;
-    margin-left: 0%;
-    margin-top: 34px;
-    clear: both;
-    width: 99.75%;
-    background-color: rgb(118, 33, 234);
+	float: left;
+	height: 105px;
+	margin-left: 0%;
+	margin-top: 34px;
+	clear: both;
+	width: 99.75%;
+	border-style: solid;
+	border-color: #006;
 }
 #profile {
     float: left;
@@ -100,3 +104,4 @@
     width: 38.97583081570997%;
     background-color: rgb(255, 255, 0);
 }
+

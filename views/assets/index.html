@@ -13,24 +13,52 @@
     <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
     <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
     <script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
-  
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>   
+
+<script language=javascript> 
+// script of "wait while loading" message
+function StartPageLoad(){
+    document.write("<div id=\"PageLoad\" style=\"position:absolute;left:20px;top:20px;display:block;font-size:12pt;font-weight:bold;\">stanna shwaie'...</div>");
+    document.write("<div id=\"PageContent\" style=\"display:none;\">");
+}
+
+function FinishPageLoad()
+{
+     document.write("</div>");
+    document.write("</div>");
+
+    document.getElementById("PageLoad").style.display = "none";
+    document.getElementById("PageContent").style.display = "block";
+}  
+</script>
     
     </head>
     
-<body>
+<body onload="initialize()"> 
+	
+<script language=javascript>
+    StartPageLoad();
+</script>
     
-	<div data-role="page" id="main">
+<div data-role="page" id="main">
 	  <div data-role="content">
     	<div id="primaryContainer" class="primaryContainer clearfix">
                <div id='background' class='clearfix'>
            <div id='weather' class='clearfix'>
+           <p>&nbsp;</p>
+
+           <script src="JS/weather.js"> 
+           </script> 
+           
            </div>
            <div id='head' class='clearfix'>
                <div id='profile' class='clearfix'>
+               <a href="#settings">link to the next page</a>
                </div>
            </div>
            <div id='body' class='clearfix'>
-           <a href="#settings">link to the next page</a>
+           
            </div>
            <div id='legs' class='clearfix'>
            </div>
@@ -51,7 +79,10 @@
     
 
           
-          
+<script language=javascript>
+    FinishPageLoad();
+</script>
+         
 </body>
     
 </html>
