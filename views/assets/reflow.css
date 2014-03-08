@@ -1,45 +1,36 @@
 /* This code is only meant for previewing your Reflow design. */
 .primaryContainer {
-    height: auto;
+    height: 95%;
     margin-left: auto;
     margin-right: auto;
-    min-height: 100%;
-    width: 100%;
+    min-height: 400;
+	max-height: 700;
+	min-width: 300px;
+	max-width: 1200px;
+    width: 95%;
 }
-#reflow-da7ff3b3-d827-41e7-88e2-d6a12aa63f62 {
-    float: left;
-    font-size: 1em;
-    width: auto;
-    height: auto;
-    text-align: left;
-    font-weight: normal;
-    line-height: 1em;
-    word-wrap: break-word;
-    margin-left: 21.707343412526996%;
-    margin-top: 33px;
-    clear: none;
-    min-height: 0px;
-}
+
 #background {
-	float: left;
-	height: 701px;
+	float: center;
+	height: auto;
 	margin-left: 0%;
 	margin-top: 0px;
 	clear: none;
-	width: 400px;
+	width: auto;
 	background-color: rgb(57, 14, 14);
-	background-image: url(file:///C|/Users/Lotan/Desktop/%D7%9E%D7%A4%D7%AA%D7%97.jpg);
+	background-image: url(http://www.countyins.com/wp-content/uploads/2011/04/Office-Image-for-County-ins-Website.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
 #weather {
-    float: left;
-    height: 122px;
-    margin-left: 0.25%;
-    margin-top: -21px;
-    clear: none;
-    width: 99.75%;
-    background-color: rgb(49, 255, 0);
+	float: left;
+	height: 122px;
+	margin-left: 0.25%;
+	margin-top: -21px;
+	clear: none;
+	width: 99.75%;
+	border-style: groove;
+	box-shadow: 5px 5px #003;
 }
 #head {
     float: none;
@@ -60,6 +51,8 @@
     width: 82.75%;
     background-color: rgb(247, 194, 194);
     margin-right: auto;
+	background-image: url(images.jpg);
+
 }
 #body {
     float: none;
