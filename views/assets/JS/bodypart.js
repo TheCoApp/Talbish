@@ -21,5 +21,6 @@ function BrowserInfo()
 }
 
 BrowserInfo();
-var varbody=document.getElementById("body");
-varbody.innerHTML=name+ "  " + codename+ "  " + version+ "  " + platform+ "  " + javaEnabled+ "  " + screenWidth+ "  " + screenHeight;	
+// var varbody=document.getElementById("karli");
+// varbody.innerHTML=name+ "  " + codename+ "  " + version+ "  " + platform+ "  " + javaEnabled+ "  " + screenWidth+ "  " + screenHeight;	
+document.write(name+ "  " + codename+ "  " + version+ "  " + platform+ "  " + javaEnabled+ "  " + screenWidth+ "  " + screenHeight	); 

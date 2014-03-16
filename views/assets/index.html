@@ -1,75 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
+ <head>
 	<link rel="stylesheet" href="boilerplate.css" />
 	<link rel="stylesheet" href="reflow.css" />
-	<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css">
-	<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
-	<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
-	<style type="text/css">
-	body,td,th {
-	font-family: helvetica, arial, "lucida grande", verdana, メイリオ, "ＭＳ Ｐゴシック", sans-serif;
-}
-    </style>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+	<link href="JS/jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css">
+	<link href="JS/jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+	<link href="js?jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
-    <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
-    <script src="jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>  
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="JS/jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="JS/jQueryAssets/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>  
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>   
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" src="http://labs.skinkers.com/content/touchSwipe/jquery.touchSwipe.min.js"></script>
-	<script language=javascript> // script of "wait while loading" message
-		function StartPageLoad(){
-   		document.write("<div id=\"PageLoad\"style=\"position:absolute;left:20px;top:20px;display:block;font-size:12pt;font-weight:bold;\">stanna shwaie'...</div>");
- 	    document.write("<div id=\"PageContent\" style=\"display:none;\">");
-		}
-		function FinishPageLoad(){
-        document.write("</div>");
-   	    document.write("</div>");
-	    document.getElementById("PageLoad").style.display = "none";
-    	document.getElementById("PageContent").style.display = "block";
-		}  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://labs.skinkers.com/content/touchSwipe/jquery.touchSwipe.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	
+	<script>
+	$(document).on("pagecreate","#main",function(){
+	$("div.headdiv").on("swipeleft",function(){document.getElementById('headimage').src=headArray[2].src;});                       
+    $("div.headdiv").on("swiperight",function(){document.getElementById('headimage').src=headArray[0].src;});  
+	$("div.bodydiv").on("swipeleft",function(){document.getElementById('bodyimage').src=bodyArray[2].src;});                       
+    $("div.bodydiv").on("swiperight",function(){document.getElementById('bodyimage').src=bodyArray[0].src;});  
+	$("div.legsdiv").on("swipeleft",function(){document.getElementById('legsimage').src=legsArray[2].src; });                       
+    $("div.legsdiv").on("swiperight",function(){document.getElementById('legsimage').src=legsArray[0].src; });  
+	$("div.shoesdiv").on("swipeleft",function(){ document.getElementById('shoesimage').src=shoesArray[2].src; });                       
+    $("div.shoesdiv").on("swiperight",function(){ document.getElementById('shoesimage').src=shoesArray[0].src; }); 
+	});
 	</script>
     
-    </head>
- <body onload="initialize()"> 
-  <script language=javascript> StartPageLoad(); </script>
-    
+
+ </head>
+ <body onload="initialize()">
   <div data-role="page" id="main">
-	  <div data-role="content">
     	<div id="primaryContainer" class="primaryContainer clearfix">
             <div id='background' class='clearfix'>
-        	    <script src="JS/backg.js"></script> <!--//calls the backgroun script -->
-	            <div id='weather' class='clearfix'>
-	    		    <p>&nbsp;</p>	
-		        	<script src="JS/weather.js">
-                    </script> 
-    	        </div>
-        	   <div id='head' class='clearfix'>
-				<script src="JS/gallery.js"></script>
-            	   <div id='profile' class='clearfix'> 
- 	             	   <a href="#settings">link to the next page</a> 
-              	   </div>
-	           </div>
-    	       <div id='body' class='clearfix'>
-               		<a href="#" onclick="document.getElementById('legs').style.background = 'url(imagesb2.jpg)'" />
-          	   </div>
-         	   <div id='legs' class='clearfix'>
-               <script src="JS/bodypart.js"></script> <!--//calls a body part script -->
-               </div>
-   	          <div id='shoes' class='clearfix'>
-               <script src="JS/shoes.js">
-               </script><a href="#"><img src="shoes1.jpg" width="405" height="281" id="shoes1" onClick="alert("click")"></a></div>
-          	   <div id='kar_li' class='clearfix'>
-          	   </div>
-     	   </div>
-		</div>
-      </div>
-    </div>
+       	        <script src="JS/backg.js"></script> <!--//calls the backgroun script -->    
+                <script src="JS/gallery.js"></script> <!-- image array -->
+                <a href="#" onclick="document.getElementById('background').style.background = 'url('images/office.jpg')'" />
+           		<div id='weather' class='clearfix'>
+		        	<script src="JS/weather.js"></script>        	 
+	   	        </div> <!-- weather-->
+        	    
+                <div id='head' class='clearfix'>
+                   <div class="headdiv">
+						<img src="images/head2.png" id='headimage' alt="headimage" width="100%" height="100%">
+                 	   <!-- <div id='profile' class='clearfix'> 
+ 	             	   <a href="#settings">הגדרות וכאלה</a> 
+              	   	   </div> -->
+                    </div> <!-- headdiv-->
+               	</div> <!-- head-->
+    	        
+                <div id='body' class='clearfix'>
+	                <div class="bodydiv">
+	                	<img name="bodyimage" src="images/body2.png" alt="bodyimage" width="100%" height="100%" id='bodyimage'>        
+                    </div>
+   	       	    </div> <!-- body-->
+         	   
+               <div id='legs' class='clearfix'>
+                    <div class="legsdiv">
+						<img src="images/legs2.png" id='legsimage' alt="legsimage" width="100%" height="100%">
+                     </div>    
+               <!-- <script src="JS/bodypart.js"></script><script src="JS/shoes.js"> //calls a body part script -->
+               </div> <!--legs -->
+    	      
+               <div id='shoes' class='clearfix'>
+                    <div class="shoesdiv">
+	               		<img src="images/shoes2.png" id='shoesimage' alt="shoesimage" width="100%" height="100%">
+                    </div>
+               </div> <!-- shoes -->
+          	   
+               <div id='kar_li' class='clearfix'>
+               		<script src="JS/bodypart.js"></script> <!--calls function that shows user system -->
+			   		<script> function getlocation() {
+				    document.getElementById("kar_li").innerHTML = window.locationProvider.getLocation();
+					} </script> 
+   		        	<a href="#settings" data-role="button">הגדרות וכאלה</a>
+               </div> <!-- karli -->
+     	   </div> <!-- background -->
+      </div> <!-- primaryContainer -->
+    </div> <!-- page -->
+ 
     
-  <div data-role="page" id="settings">
+ <div data-role="page" id="settings">
     <div data-role="content">
       <div data-role="fieldcontain">
       <fieldset><legend>form</legend>
@@ -77,16 +92,23 @@
       		  text: <input type="Text" name="text" />
       		  <input name="submit" type="submit" id="submit" value="Submit" />
              </form>
-       </fieldset>
-        
-<script>document.write(TEXTINPUT);  </script>
+      		<div data-role="fieldcontain">
+              </br>
+<select name="backcheck" class="select">
+  <option value="0">class</option>
+  <option value="1">office</option>
+  <option value="2">nature</option>
+</select>
+			</br>
+		    </div>            
+	</fieldset>
+ <button onclick="backchange()">שינוי רקע</button>
       </div>
       <a href="closet.html">link to the closet</a>
     </div>
-  </div>
-          
-  <script language=javascript> FinishPageLoad(); </script>
-         
+  
+  </div> 
+                 
   </body>
     
  </html>

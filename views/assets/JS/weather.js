@@ -51,7 +51,7 @@ var wicon = "'http://icons-ak.wxug.com/i/c/k/nt_clear.gif'";
         if (results[1]) {
          //formatted address
          //alert(results[0].formatted_address)
- 			varweather.innerHTML+= " מה איבדת ב" + results[0].formatted_address + "<br/>" + lat + "  " +lng;
+ 			varweather.innerHTML+= " מה איבדת ב" + results[0].formatted_address + " . " + lat + "  " +lng;
         //find country name
              for (var i=0; i<results[0].address_components.length; i++) {
              for (var b=0;b<results[0].address_components[i].types.length;b++) {

@@ -6,95 +6,100 @@
     min-height: 400;
 	max-height: 700;
 	min-width: 300px;
-	max-width: 1200px;
+	max-width: 800px;
     width: 95%;
 }
 
 #background {
 	float: center;
-	height: auto;
+	height: inherit;
 	margin-left: 0%;
 	margin-top: 0px;
 	clear: none;
 	width: auto;
 	background-color: rgb(57, 14, 14);
-	background-image: url(http://www.countyins.com/wp-content/uploads/2011/04/Office-Image-for-County-ins-Website.jpg);
+	background-image: url('images/class.jpg');
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
 }
 #weather {
 	float: left;
-	height: 122px;
+	height: 115px;
 	margin-left: 0.25%;
-	margin-top: -21px;
+	margin-top: auto;
 	clear: none;
 	width: 99.75%;
 	border-style: groove;
 	box-shadow: 5px 5px #003;
 }
 #head {
-    float: none;
+    float: center;
     height: 80px;
     margin-left: auto;
-    margin-top: 122px;
+    margin-top: 125px;
     clear: none;
     width: 82.75%;
-    background-color: rgb(235, 212, 212);
     margin-right: auto;
+	border-style: solid;
+	border-color: #006;
 }
-#legs {
-    float: none;
-    height: 150px;
-    margin-left: auto;
-    margin-top: -320px;
-    clear: none;
-    width: 82.75%;
-    background-color: rgb(247, 194, 194);
-    margin-right: auto;
-	background-image: url(images.jpg);
 
-}
 #body {
+	float: inherit;
+	height: 170px;
+	margin-left: auto;
+	margin-top:auto;
+	clear: both;
+	width: 82.75%;
+	margin-right: auto;
+	border-style: solid;
+	border-color: #006;
+	alignment-adjust: hanging
+}
+
+#legs {
     float: none;
     height: 170px;
     margin-left: auto;
-    margin-top: 150px;
+    margin-top: 0px;
     clear: none;
     width: 82.75%;
-    background-color: rgb(242, 115, 115);
     margin-right: auto;
+	border-style: solid;
+	border-color: #006;
+
 }
+
 #shoes {
     float: none;
     height: 50px;
     margin-left: auto;
-    margin-top: 170px;
+    margin-top: 0px;
     clear: none;
     width: 82.75%;
-    background-color: rgb(242, 70, 70);
-    opacity: 1;
-    visibility: visible;
-    display: block;
     overflow: auto;
     margin-right: auto;
+	border-style: solid;
+	border-color: #006;
 }
 #kar_li {
 	float: left;
-	height: 105px;
+	height: 80px;
 	margin-left: 0%;
-	margin-top: 34px;
+	margin-top: 20px;
 	clear: both;
 	width: 99.75%;
 	border-style: solid;
 	border-color: #006;
 }
-#profile {
-    float: left;
-    height: 48px;
-    margin-left: -4.534743202416918%;
-    margin-top: -11px;
-    clear: none;
-    width: 38.97583081570997%;
-    background-color: rgb(255, 255, 0);
-}
 
+#profile {
+	float: left;
+	height: 48px;
+	margin-left: -4.534743202416918%;
+	margin-top: -11px;
+	clear: both;
+	width: 38.97583081570997%;
+	background-color: rgb(255, 255, 0);
+	visibility: hidden;	
+}

@@ -1,79 +1,54 @@
 // JavaScript Document
-	$(function() {
-		var IMG_WIDTH = 500,
-		currentImg=0,
-		maxImages=3;
-		speed=500,
-		imgs = $("#imgs");
+var headArray = new Array();
+var bodyArray = new Array();
+var legsArray = new Array();
+var shoesArray = new Array();
 
-		//Init touch swipe
-		imgs.swipe( {
-			triggerOnTouchEnd : true,
-			swipeStatus : swipeStatus,
-			allowPageScroll:"vertical"
-		});
+headArray[0] = new Image();
+headArray[0].src = 'images/head1.png';
+headArray[1] = new Image();
+headArray[1].src = 'images/head2.png';
+headArray[2] = new Image();
+headArray[2].src = 'images/head3.png';
 
-		/**
-		* Catch each phase of the swipe.
-		* move : we drag the div.
-		* cancel : we animate back to where we were
-		* end : we animate to the next image
-		*/
-		function swipeStatus(event, phase, direction, distance, fingers)
-		{
-			//If we are moving before swipe, and we are going L or R, then manually drag the images
-			if( phase=="move" && (direction=="left" || direction=="right") )
-			{
-				var duration=0;
+bodyArray[0] = new Image();
+bodyArray[0].src = 'images/body1.png';
+bodyArray[1] = new Image();
+bodyArray[1].src = 'images/body2.png';
+bodyArray[2] = new Image();
+bodyArray[2].src = 'images/body3.png';
 
-				if (direction == "left")
-					scrollImages((IMG_WIDTH * currentImg) + distance, duration);
+legsArray[0] = new Image();
+legsArray[0].src = 'images/legs1.png';
+legsArray[1] = new Image();
+legsArray[1].src = 'images/legs2.png';
+legsArray[2] = new Image();
+legsArray[2].src = 'images/legs3.png';
 
-				else if (direction == "right")
-					scrollImages((IMG_WIDTH * currentImg) - distance, duration);
-			}
+shoesArray[0] = new Image();
+shoesArray[0].src = 'images/shoes1.png';
+shoesArray[1] = new Image();
+shoesArray[1].src = 'images/shoes2.png';
+shoesArray[2] = new Image();
+shoesArray[2].src = 'images/shoes3.png';
 
-			//Else, cancel means snap back to the begining
-			else if ( phase == "cancel")
-			{
-				scrollImages(IMG_WIDTH * currentImg, speed);
-			}
+/*------------------------------------*/
 
-			//Else end means the swipe was completed, so move to the next image
-			else if ( phase =="end" )
-			{
-				if (direction == "right")
-					previousImage()
-				else if (direction == "left")
-					nextImage()
-			}
-		}
+function nextImage(element, bodypart)
+{
+    var img = document.getElementById(element);
 
-		function previousImage()
-		{
-			alert(prev);
-			currentImg = Math.max(currentImg-1, 0);
-			scrollImages( IMG_WIDTH * currentImg, speed);
-		}
+    for(var i = 0; i < bodypart+'Array'.length; i++)
+    {
+        if(bodypart+'Array'[i].src == img.src) // << check this
+        {
+            if(i === bodypart+'Array'.length){
+                document.getElementById(element).src = bodypart+'Array'[0].src;
+                break;
+            }
+            document.getElementById(element).src = bodypart+'Array'[i+1].src;
+            break;
+        }
+    }
+}
 
-		function nextImage()
-		{
-			alert(next);
-			currentImg = Math.min(currentImg+1, maxImages-1);
-			scrollImages( IMG_WIDTH * currentImg, speed);
-		}
-
-		/**
-		 * Manually update the position of the imgs on drag
-		 */
-		function scrollImages(distance, duration)
-		{
-			alert(scrol);
-			imgs.css("-webkit-transition-duration", (duration/1000).toFixed(1) + "s");
-
-			//inverse the number we set in the css
-			var value = (distance<0 ? "" : "-") + Math.abs(distance).toString();
-
-			imgs.css("-webkit-transform", "translate3d("+value +"px,0px,0px)");
-		}
-	});
